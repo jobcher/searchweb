@@ -11,6 +11,8 @@
     <link rel="shortcut icon" href="/assets/images/logos/bear2.png" />
     <meta name="keywords" content="jobcher.com 网址导航" />
     
+    <meta name="baidu-site-verification" content="codeva-cCAOSG8MBO" />
+    
     <link rel="stylesheet" id="block-library-css"
         href="/assets/css/block-library.min-5.6.2.css" type="text/css" media="all" />
     <link rel="stylesheet" id="iconfont-css" href="/assets/css/iconfont-3.03029.1.css"
@@ -28,6 +30,14 @@
     <script type="text/javascript" src="/assets/js/content-search.js"  id="content-search-js"></script>
     
     <script>
+        
+        var _hmt = _hmt || [];
+            (function () {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?efccc04cb44fc49faddac5876180b369";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
         
     </script>
     
@@ -123,6 +133,20 @@
 
                     <ul class="nav navbar-menu text-xs order-1 order-md-2">
                         
+                        
+                        <li class="nav-item mr-3 mr-lg-0 d-none d-lg-block">
+                            <script>
+                                fetch('https://v1.hitokoto.cn')
+                                    .then(response => response.json())
+                                    .then(data => {
+                                    const hitokoto = document.getElementById('hitokoto_text')
+                                    hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+                                    hitokoto.innerText = data.hitokoto
+                                    })
+                                    .catch(console.error)
+                            </script>                           
+                            <div id="hitokoto"><a href="#" target="_blank" id="hitokoto_text">疏影横斜水清浅，暗香浮动月黄昏。</a></div>
+                        </li>
                         
                         
                         <li class="nav-search ml-3 ml-md-4">
